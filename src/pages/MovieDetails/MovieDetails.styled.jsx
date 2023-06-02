@@ -109,9 +109,9 @@ export const LinkMov = styled.a`
   }
 `;
 
-export const LinkActive = styled.a`
-  font-size: 25px;
-  font-weight: 500;
-  color: rgb(255, 89, 0);
-  text-transform: uppercase;
-`;
+// export const LinkActive = styled.a`
+//   font-size: 25px;
+//   font-weight: 500;
+//   color: rgb(255, 89, 0);
+//   text-transform: uppercase;
+// `;

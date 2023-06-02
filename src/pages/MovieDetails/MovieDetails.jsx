@@ -21,7 +21,6 @@ import {
   LinkList,
   LinkItem,
   LinkMov,
-  LinkActive,
 } from './MovieDetails.styled';
 
 const MovieDetails = () => {
