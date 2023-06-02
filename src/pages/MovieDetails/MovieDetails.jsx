@@ -25,8 +25,8 @@ import {
 } from './MovieDetails.styled';
 
 const MovieDetails = () => {
-  const activeClassName = ({ isActive }) =>
-    isActive ? `${LinkActive}` : `${LinkMov}`;
+  // const activeClassName = ({ isActive }) =>
+  //   isActive ? `${LinkActive}` : `${LinkMov}`;
 
   const location = useLocation();
 
