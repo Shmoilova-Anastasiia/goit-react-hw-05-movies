@@ -10,6 +10,7 @@ body {
 }
 
 code {
+  color: hwb(21 0% 0%);
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
