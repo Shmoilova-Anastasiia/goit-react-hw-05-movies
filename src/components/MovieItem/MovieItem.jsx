@@ -1,7 +1,9 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import { TitleMovie, ItemMovie, ImgMovie } from './MovieItem.styled';
+import defaultImg from '../../image/Not Found.jpg';
 
 export const MovieItem = ({ url, title, activeId, location }) => {
   return (
@@ -9,11 +11,7 @@ export const MovieItem = ({ url, title, activeId, location }) => {
       <Link to={`/movies/${activeId}`} state={{ from: location }}>
         <ImgMovie
           src={
-            url !== null ? (
-              `https://image.tmdb.org/t/p/w300${url}`
-            ) : (
-              <p>NotFound</p>
-            )
+            url !== null ? `https://image.tmdb.org/t/p/w300${url}` : defaultImg
           }
           alt={title}
         />

@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 
 export const Image = styled.img`
+  height: 240px;
   display: block;
   border: 2px solid rgba(0, 255, 0, 0.5);
   border-radius: 5px;

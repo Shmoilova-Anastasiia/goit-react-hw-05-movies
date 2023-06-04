@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { fetchMovieCast } from '../../Api/movies';
 import { Loader } from 'components/Loader/Loader';
 
+import defaultImg from '../../image/Not Found.jpg';
 import {
   Image,
   ListCast,
@@ -58,11 +59,9 @@ const Cast = () => {
             <ItemCast key={index}>
               <Image
                 src={
-                  item.profile_path ? (
-                    `https://image.tmdb.org/t/p/w200${item.profile_path}`
-                  ) : (
-                    <p>NotFound</p>
-                  )
+                  item.profile_path
+                    ? `https://image.tmdb.org/t/p/w200${item.profile_path}`
+                    : defaultImg
                 }
                 alt=""
               />

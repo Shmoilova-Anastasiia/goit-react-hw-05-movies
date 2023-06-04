@@ -30,6 +30,7 @@ export const TitleMovie = styled.h2`
 
 export const ImgMovie = styled.img`
   width: 240px;
+  height: 80%;
   border-radius: 10px;
   border: 3px solid rgba(0, 255, 0, 0.5);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);

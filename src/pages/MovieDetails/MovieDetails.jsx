@@ -1,4 +1,4 @@
-import { Suspense, useEffect, useState } from 'react';
+import { Suspense, useRef, useEffect, useState } from 'react';
 import { fetchMovieDetails } from 'Api/movies';
 import { Container } from 'pages/HomePage/HomePage.styled';
 import {
@@ -22,6 +22,7 @@ import {
   LinkItem,
   LinkMov,
 } from './MovieDetails.styled';
+import defaultImg from '../../image/Not Found.jpg';
 
 const MovieDetails = () => {
   // const activeClassName = ({ isActive }) =>
@@ -48,22 +49,16 @@ const MovieDetails = () => {
 
   return (
     <Container>
-      <Link
-        to={
-          location?.state?.from?.pathname + location?.state?.from?.search ?? '/'
-        }
-      >
+      <Link to={useRef(location.state?.from ?? '/').current}>
         <Back>Back</Back>
       </Link>
       <InfoBox>
         <ImageBox>
           <Image
             src={
-              film?.poster_path ? (
-                `https://image.tmdb.org/t/p/w200${film.poster_path}`
-              ) : (
-                <p>NotFound</p>
-              )
+              film?.poster_path
+                ? `https://image.tmdb.org/t/p/w200${film.poster_path}`
+                : defaultImg
             }
             alt=""
           />
@@ -99,7 +94,7 @@ const MovieDetails = () => {
             <NavLink
               to="cast"
               // className={activeClassName}
-              state={location?.state ?? '/'}
+              state={{ from: location }}
             >
               <LinkMov>cast</LinkMov>
             </NavLink>

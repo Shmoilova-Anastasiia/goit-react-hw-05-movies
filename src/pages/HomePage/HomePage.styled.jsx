@@ -1,7 +1,11 @@
 import styled from '@emotion/styled';
 
 export const Container = styled.div`
-  background-color: grey;
+  background: radial-gradient(
+    circle,
+    rgba(224, 232, 236, 1) 0%,
+    rgba(137, 142, 143, 1) 100%
+  );
   max-width: 1170px;
   margin-left: auto;
   margin-right: auto;

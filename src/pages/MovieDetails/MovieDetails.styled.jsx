@@ -42,6 +42,7 @@ export const ImageBox = styled.div`
 `;
 
 export const Image = styled.img`
+  height: 80%;
   min-width: 240px;
   max-width: 250px;
   display: block;
